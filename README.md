@@ -60,8 +60,6 @@ I use two sets of my pictures to get the right proportions, but you can ofcourse
 
         <img src="img/picture2.jpg" width="100" height="100" data-large="img/picture2.jpg"/>
         
-That's it!
-
-Hope you'll enjoy it.
+That's it! Hope you'll enjoy it.
 
 © Julia Sivartsson
