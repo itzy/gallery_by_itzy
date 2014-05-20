@@ -20,7 +20,8 @@ How to install
 To get started, clone gallery_by_itzy or download it manually to your device.
 
  Secondly, put gallery.less in your css folder and add the following to your header to get the stylesheet:
-        <link rel="stylesheet/less" type="text/css" href="css/gallery.less">
+ 
+         <link rel="stylesheet/less" type="text/css" href="css/gallery.less">
 
 To get the javascript to work, put gallery.js in your javascript folder and add the following to the footer of you page: (the first link will make jQuery work for you by an external link, it is important that you load it before gallery.js)
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -28,14 +29,15 @@ To get the javascript to work, put gallery.js in your javascript folder and add 
 
 Now you're ready to create the gallery!
 Open the page you want to have your gallery in and write the following code:
+
         <div id="lightbox">
         <ul>
         <li>
-        <img src="img/picture1_small.jpg" data-large="img/picture1.jpg"/>
-        <div class="image_title">
-        <h5 class="title">Picture 1</h5>
-        </div>
-        </li>
+         <img src="img/picture1_small.jpg" data-large="img/picture1.jpg"/>
+         <div class="image_title">
+         <h5 class="title">Picture 1</h5>
+         </div>
+         </li>
 
         <li>
         <img src="img/picture2_small.jpg" data-large="img/picture2.jpg"/>
