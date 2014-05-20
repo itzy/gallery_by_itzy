@@ -1,11 +1,18 @@
 gallery_by_itzy
 ===============
 
+Version 1.1
+
 A lightbox gallery, created by Julia Sivartsson, webdeveloper-student att Blekinge Tekniska Högskola.
 This module is complete with javascript, css and a test-page that is easy to use.
 
 Within the lightbox you can browse between the pictures in the gallery and close it both by clicking outside the picture or with the esc-button on your keyboard.
 There is also room for a image-title.
+
+ License
+=====
+
+This software is free software and carries a MIT license.
 
 Screenshots
 =====
