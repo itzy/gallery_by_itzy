@@ -19,7 +19,7 @@ How to install
  
 To get started, clone gallery_by_itzy or download it manually to your device.
     
- Secondly, put gallery.less in your css folder and add the following to your header to get the stylesheet:
+ Secondly, put gallery.css in your css folder and add the following to your header to get the stylesheet:
 
           <link rel="stylesheet" type="text/css" href="css/gallery.css">
 
