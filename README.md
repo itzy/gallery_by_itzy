@@ -20,9 +20,7 @@ How to install
 To get started, clone gallery_by_itzy or download it manually to your device.
     
  Secondly, put gallery.less in your css folder and add the following to your header to get the stylesheet:
- 
-         <div id="lightbox">
- 
+
           <link rel="stylesheet" type="text/css" href="css/gallery.css">
 
 To get the javascript to work, put gallery.js in your javascript folder and add the following to the footer of you page: (the first link will make jQuery work for you by an external link, it is important that you load it before gallery.js)
