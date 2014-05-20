@@ -24,8 +24,9 @@ To get started, clone gallery_by_itzy or download it manually to your device.
          <link rel="stylesheet/less" type="text/css" href="css/gallery.less">
 
 To get the javascript to work, put gallery.js in your javascript folder and add the following to the footer of you page: (the first link will make jQuery work for you by an external link, it is important that you load it before gallery.js)
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script src="js/gallery.js"></script>
+
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+         <script src="js/gallery.js"></script>
 
 Now you're ready to create the gallery!
 Open the page you want to have your gallery in and write the following code:
@@ -48,7 +49,8 @@ Open the page you want to have your gallery in and write the following code:
         </ul>
         
 Note:
-I use two sets of my pictures to get the right proportions, but you can ofcourse just set the width and height on the thumbnail picture
+I use two sets of my pictures to get the right proportions, but you can ofcourse just set the width and height on the thumbnail picture.
+
         <img src="img/picture2.jpg" width="100" height="100" data-large="img/picture2.jpg"/>
         
 That's it!
