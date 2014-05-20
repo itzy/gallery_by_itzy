@@ -1,103 +1,54 @@
 gallery_by_itzy
 ===============
 
-A lightbox gallery
+A lightbox gallery, created by Julia Sivartsson, webdeveloper-student att Blekinge Tekniska Högskola.
+This module is complete with javascript, css and a test-page that is easy to use.
 
-A flash module for Anax-MVC, created by Julia Sivartsson, webdeveloper-student at Blekinge Tekniska Högskola.
-This module comes with a simple stylesheet and icons that are available if you have Font Awesome (information further down).
+Within the lightbox you can browse between the pictures in the gallery and close it both by clicking outside the picture or with the esc-button on your keyboard.
+There is also room for a image-title.
 
-It comes with four diffent styles:
-- information
-- success
-- warning
-- error
-
-Preview
+Screenshots
 =====
 
 ![screenshot](http://i57.tinypic.com/2vun1au.jpg)
+![screenshot](http://i60.tinypic.com/f38j9g.jpg)
 
 
-How to use in Anax-MVC
+How to install
 =====
 
-First of all you need to implement CFlash in your own Anax-MVC version, simply place the class in your 'src'-folder.
-At the top of your frontcontroller, add the following:
+To get started, clone gallery_by_itzy or download it manually to your device.
 
-    // Get environment & autoloader and the $app-object.
-    require __DIR__.'/config_with_app.php';
+ Secondly, put gallery.less in your css folder and add the following to your header to get the stylesheet:
+        <link rel="stylesheet/less" type="text/css" href="css/gallery.less">
 
-    // Get the class CFlash
-    $di->setShared('flash', function() {
-    $flash = new Anax\Flash\CFlash();
-    return $flash;
-    });
+To get the javascript to work, put gallery.js in your javascript folder and add the following to the footer of you page: (the first link will make jQuery work for you by an external link, it is important that you load it before gallery.js)
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="js/gallery.js"></script>
 
-    // Starts the session, wich is required by Flash by itzy
-    $app->session;
+Now you're ready to create the gallery!
+Open the page you want to have your gallery in and write the following code:
+        <div id="lightbox">
+        <ul>
+        <li>
+        <img src="img/picture1_small.jpg" data-large="img/picture1.jpg"/>
+        <div class="image_title">
+        <h5 class="title">Picture 1</h5>
+        </div>
+        </li>
 
-If you want to use the stylesheet that comes with the module, put flash.css in your css folder to make it work, then write the following code in your froncontroller (below the previous code):
-
-    // Add stylesheet for flash by itzy
-    $app->theme->addStylesheet('css/flash.css');
-    
-    
+        <li>
+        <img src="img/picture2_small.jpg" data-large="img/picture2.jpg"/>
+        <div class="image_title">
+        <h5 class="title">Picture 2</h5>
+        </div>
+        </li>
+        </ul>
+        
+Note:
+I use two sets of my pictures to get the right proportions, but you can ofcourse just set the width and height on the thumbnail picture
+        <img src="img/picture2.jpg" width="100" height="100" data-large="img/picture2.jpg"/>
+        
 That's it!
-Now you can get flash by itzy for your own website.
-
-
-    // Put this in a route in your frontcontroller
-    $app->flash->add('info', 'Better be on your toes, this needs your attention but is not urgent.');
-    $app->flash->add('success', 'Yay! You are totally successful !');
-    $app->flash->add('warning', 'Dude, I have to warn you, you do not look too good.');
-    $app->flash->add('error', 'Oh snap, something went wrong!');
-    
-    //If you're in a controller
-    $this->flash->add('info', 'Better be on your toes, this needs your attention but is not urgent.');
-    $this->flash->add('success', 'Yay! You are totally successful !');
-    $this->flash->add('warning', 'Dude, I have to warn you, you do not look too good.');
-    $this->flash->add('error', 'Oh snap, something went wrong!');
-    
-To then make the messages visible, add the following code inside your route/controller:
-
-        //frontcontroller
-        $app->flash->get();
-        
-        //controller or view
-        $this->flash->get();
-        
-If you have support for Font Awesome, wich you get very easy from their page (http://fortawesome.github.io/Font-Awesome/) change the code to this:
-
-        //frontcontroller
-        $app->flash->get('icons');
-        
-        //controller or view
-        $this->flash->get('icons');
-        
-Not that hard, right!
-If you look at the code of your website it will look similar to this:
-
-    <div class='flash_info'>
-    <i class='fa fa-info-circle'></i>
-    Better be on your toes, this needs your attention but is not urgent.
-    </div>
-    
-    <div class='flash_success'>
-    <i class='fa fa-check'></i>
-    Yay! You are totally successful !
-    </div>
-    
-    <div class='flash_warning'>
-    <i class='fa fa-warning'></i>
-    Dude, I have to warn you, you do not look too good.
-    </div>
-    
-    <div class='flash_error'>
-    <i class='fa fa-times-circle'></i>
-    Oh snap, something went wrong!
-    </div>
-    
-    
-Have fun!
+Hope you'll enjoy it.
 © Julia Sivartsson
-tiynt
